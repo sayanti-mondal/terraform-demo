@@ -1,4 +1,4 @@
-variable "ami_id" {
+variable "ami" {
   description = "AMI ID to use for the EC2 instance"
   type        = string
   default     = "ami-019715e0d74f695be"
