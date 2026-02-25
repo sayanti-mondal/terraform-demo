@@ -3,6 +3,12 @@ pipeline {
     tools { 
         terraform 'terraform 1.13.5'
     }
+
+    environment {
+        AWS_ACCESS_KEY_ID     = credentials('aws-creds')
+        AWS_SECRET_ACCESS_KEY = credentials('aws-creds')
+    }
+    
     stages {
         stage('check terraform') {
             steps {
